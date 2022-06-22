@@ -44,4 +44,14 @@ switch (game) {
     console.log("invalid have no money");
 }
 
+// loop with while----
+
 console.log(price);
+
+let clientCounter = 18;
+const maxClients = 25;
+
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
