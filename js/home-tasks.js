@@ -27,3 +27,20 @@ function formatMessage(message, maxLength) {
   /// Change code above this line
   return result;
 }
+
+// task 36 part 1
+
+function checkForSpam(message) {
+  let result;
+  // Change code below this line
+  message = message.toLowerCase();
+  if (message.includes("spam")) {
+    result = true;
+  } else if (message.includes("sale")) {
+    result = true;
+  } else {
+    result = false;
+  }
+  // Change code above this line
+  return result;
+}
