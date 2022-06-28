@@ -104,19 +104,92 @@
 //   console.log(client);
 // }
 
-const clients = ["Mango", "Poly", "Ajax"];
-const clientNameToFind = "Poly";
-let message;
+// const clients = ["Mango", "Poly", "Ajax"];
+// const clientNameToFind = "Poly";
+// let message;
 
-for (const client of clients) {
-  // На каждой итерации будем проверять совпадает ли элемент массива с
-  // именем клиента. Если совпадает то мы записываем в message сообщение
-  // об успехе и делаем break чтобы не искать дальше
-  if (client === clientNameToFind) {
-    message = "Клиент с таким именем есть в базе данных!";
-    break;
-  }
-  message = "Клиента с таким именем нету в базе данных!";
-}
+// for (const client of clients) {
+//   // На каждой итерации будем проверять совпадает ли элемент массива с
+//   // именем клиента. Если совпадает то мы записываем в message сообщение
+//   // об успехе и делаем break чтобы не искать дальше
+//   if (client === clientNameToFind) {
+//     message = "Клиент с таким именем есть в базе данных!";
+//     break;
+//   }
+//   message = "Клиента с таким именем нету в базе данных!";
+// }
 
-console.log(message);
+// console.log(message);
+
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// // Для чисел меньше чем порог срабатывает continue, выполнение тела прекращается
+// // и управление передаётся на следующую итерацию.
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
+// }
+
+/*
+Умова завдання:
+Напиши скрипт який виводитиме в консоль браузера рядок залежно від значення змінної hours.
+Якщо значення змінної hours:
+- менше 17, виводь рядок "Pending"
+- більше або рівне 17 і менше або дорівнює 24, виводь рядок "Expires"
+- більше 24, виводи рядок "Overdue"
+*/
+
+// exaple #6
+// const hours = 25;
+// let message;
+
+// if (hours < 17) {
+//   message = "Pending";
+// } else if (hours >= 17 && hours <= 24) {
+//   message = "Expires";
+// } else {
+//   hours > 24;
+//   message = "Overdue";
+// }
+// console.log(message);
+
+// example 9
+// Напиши цикл for який виводить у консоль браузера числа за зростанням від min до max, але якщо число кратне 5.
+// */
+
+// const max = 100;
+// const min = 20;
+
+// for (i = min; i <= max; i += 5) {
+//   console.log(i);
+// }
+
+// example 10
+// Умова завдання:
+// Напиши скрипт, який буде запитувати логін за допомогою prompt і логуватиме результат у консоль браузера.
+// - Якщо відвідувач вводить "Адмін", то prompt запитує пароль
+// - Якщо нічого не введено або натиснуто клавішу Esc - вивести рядок "Скасовано"
+// - В іншому випадку вивести рядок "Я вас не знаю"
+// Пароль перевіряти так:
+// - Якщо введено пароль "Я адмін", то вивести рядок "Вітаю!"
+// - Інакше виводити рядок "Невірний пароль"
+// */
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"]; -----????
+// console.log(clients.slice(1, 3));
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+//   // Change code above this line
+// }
+
+// console.log(calculateEngravingPrice);
+
+const message = "JavaScript is in my blood";
+let pricePerWord = 10;
+
+console.log(message.split() * ${pricePerWord});
