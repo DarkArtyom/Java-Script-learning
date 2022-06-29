@@ -214,3 +214,36 @@
 // } else {
 //   console.log(newArray);
 // }
+
+// task 18
+// function calculateTotal(number) {
+//   total = 0;
+//   for (i = 0; i <= number; i += 1) {
+//     total += i;
+//   }
+//   return total;
+// }
+
+// task 21
+// variant #1
+// let words = "The quick brown fox jumped over the lazy dog";
+// let wordsNew = words.split(" ");
+// console.log(wordsNew);
+// let longestWord = 0;
+// for (i = 0; i <= wordsNew.length; i += 1) {
+//   if (wordsNew[i].length > longestWord) {
+//     longestWord = wordsNew[i].length;
+//   }
+//   console.log(longestWord); ---- back only number of word.length
+
+// variant#2
+function findLongestWord(string) {
+  string = string.split(" ");
+  let longestWord = string[0];
+  for (const word of string) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
