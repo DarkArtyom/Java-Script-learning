@@ -187,9 +187,30 @@
 //   // Change code above this line
 // }
 
+// Task 12
 // console.log(calculateEngravingPrice);
+// const words = "java script is js";
+// let array = words.split(" ");
+// // console.log(array);
+// let total = array.length * 2;
+// console.log(total);
 
-const message = "JavaScript is in my blood";
-let pricePerWord = 10;
+// Task 13
+// let title = "Ten secrets of JavaScript";
+// title = title.toLocaleLowerCase();
+// let slug = title.split(" ");
+// console.log(slug.join("-"));
 
-console.log(message.split() * ${pricePerWord});
+// task 16
+// const firstArray = ["Mango", "Poly"];
+// const secondArray = ["Ajax", "Chelsea"];
+
+// let newArray = firstArray.concat(secondArray);
+// // console.log(newArray);
+// let maxLength = 3;
+
+// if (newArray.length > maxLength) {
+//   console.log(newArray.slice(0, maxLength));
+// } else {
+//   console.log(newArray);
+// }
