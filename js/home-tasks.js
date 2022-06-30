@@ -237,13 +237,47 @@
 //   console.log(longestWord); ---- back only number of word.length
 
 // variant#2
-function findLongestWord(string) {
-  string = string.split(" ");
-  let longestWord = string[0];
-  for (const word of string) {
-    if (word.length > longestWord.length) {
-      longestWord = word;
-    }
-  }
-  return longestWord;
-}
+// function findLongestWord(string) {
+//   string = string.split(" ");
+//   let longestWord = string[0];
+//   for (const word of string) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
+
+// task 22
+// let min = 14;
+// let max = 17;
+// const numbers = [];
+
+// let arrNumbers = 0;
+// for (i = min; i <= max; i += 1) {
+//   arrNumbers = i;
+//   console.log(arrNumbers);
+//   // numbers.push(arrNumbers);
+//
+// Вызов функции createArrayOfNumbers(14, 17) возвращает [14, 15, 16, 17]
+
+// task 23
+// const numbers = [1, 2, 3, 4, 5];
+// let value = 4;
+// let arr = [];
+
+// console.log(numbers);
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+//   if (numbers[i] > value) {
+//     arr.push(numbers[i]);
+//   }
+//   console.log(arr);
+
+// task 24
+// const fruit = "pear";
+// const fruits = ["apple", "plum", "pear", "orange"];
+// if (fruits.includes(fruit)) {
+//   console.log(fruit);
+// }
