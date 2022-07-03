@@ -284,32 +284,27 @@
 
 // task 25
 
-let array1 = [1, 2, 3];
-let array2 = [2, 1, 17, 19];
-let newArr = [];
-console.log(array1);
-console.log(array2);
+// let array1 = [1, 2, 3];
+// let array2 = [2, 1, 17, 19];
+// let newArr = [];
+// console.log(array1);
+// console.log(array2);
 
-for (let i = 0; i < array1.length; i += 1) {
-  console.log(array1[i]);
-  if (array2.includes(array1[i])) {
-    newArr.push(array1[i]);
-  }
-  console.log(newArr);
-}
-
-// for (let i = 0; i < array2; i += 1) {
-//   console.log("array", array2[i]);
-//   if (array1.includes(array2.length)) {
-//     newArr.push(array2);
+// for (let i = 0; i < array1.length; i += 1) {
+//   console.log(array1[i]);
+//   if (array2.includes(array1[i])) {
+//     newArr.push(array1[i]);
 //   }
 //   console.log(newArr);
 // }
 
-// Вызов getCommonElements([1, 2, 3], [2, 1, 17, 19]) возвращает[1, 2]
-
-// Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.
-
-// Например, в двух массивах [1, 3, 5] и [0, 8, 5, 3] общими будут числа 3 и 5, т.к. они присутствуют в обоих исходных массивах. А числа 0, 1 и 8 присутствуют только в одном из массивов.
-
-// Напиши функцию getCommonElements(array1, array2) которая получает два массива произвольной длины в параметры array1 и array2, и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
+let start = 2;
+let end = 5;
+let arr = [];
+for (let i = start; i <= end; i += 1) {
+  if (i % 2 === 0) {
+    arr.push(i);
+  }
+  console.log(arr);
+}
+// Вызов функции getEvenNumbers(3, 11) возвращает [4, 6, 8, 10]
