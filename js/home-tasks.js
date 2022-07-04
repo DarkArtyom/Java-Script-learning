@@ -298,13 +298,27 @@
 //   console.log(newArr);
 // }
 
-let start = 2;
-let end = 5;
-let arr = [];
-for (let i = start; i <= end; i += 1) {
-  if (i % 2 === 0) {
-    arr.push(i);
-  }
-  console.log(arr);
-}
+// task 31
+// let start = 2;
+// let end = 5;
+// let arr = [];
+// for (let i = start; i <= end; i += 1) {
+//   if (i % 2 === 0) {
+//     arr.push(i);
+//   }
+//   console.log(arr);
+// }
 // Вызов функции getEvenNumbers(3, 11) возвращает [4, 6, 8, 10]
+
+// task 32
+
+// let array = [1, 2, 3, 4, 5];
+// let value = 17;
+// for (const newArr of array) {
+//   if (newArr === value) {
+//     console.log(value);
+//   }
+// }
+
+// Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") возвращает true
+// [1, 2, 3, 4, 5], 17;
