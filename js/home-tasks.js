@@ -356,33 +356,63 @@
 //   console.log(book[key]);
 // }
 
-function compare(firstNumber, secondNumber, operation, result) {
-  const num1 = Number(firstNumber);
-  const num2 = Number(secondNumber);
-  const res = Number(result);
+// function compare(firstNumber, secondNumber, operation, result) {
+//   const num1 = Number(firstNumber);
+//   const num2 = Number(secondNumber);
+//   const res = Number(result);
 
-  if (isNaN(num1) || isNaN(num2) || isNaN(res)) return "not number";
+//   if (isNaN(num1) || isNaN(num2) || isNaN(res)) return "not number";
 
-  const operationDic = {
-    "+": function sum(c, b) {
-      return c + b;
-    },
-    "-": function sum(c, b) {
-      return c - b;
-    },
-    "*": function sum(c, b) {
-      return c * b;
-    },
-    "/": function sum(c, b) {
-      return c / b;
-    },
-  };
+//   const operationDic = {
+//     "+": function sum(c, b) {
+//       return c + b;
+//     },
+//     "-": function sum(c, b) {
+//       return c - b;
+//     },
+//     "*": function sum(c, b) {
+//       return c * b;
+//     },
+//     "/": function sum(c, b) {
+//       return c / b;
+//     },
+//   };
 
-  if (!operationDic[operation]) {
-    return "invalid operation";
-  }
-  const operationResult = operationDic[operation](num1, num2);
-  return operationResult === res;
-}
+//   if (!operationDic[operation]) {
+//     return "invalid operation";
+//   }
+//   const operationResult = operationDic[operation](num1, num2);
+//   return operationResult === res;
+// }
 
-console.log(compare("2", "2", "*", "4"));
+// console.log(compare("2", "2", "*", "4"));
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   // Ключ
+//   console.log(key);
+//   // Значение свойства с таким ключом
+//   console.log(book[key]);
+// }
+
+// Task 10
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+
+// for (const key in apartment) {
+//   keys.push(key);
+// }
+
+// for (const value in apartment) values.push(apartment[value]);
