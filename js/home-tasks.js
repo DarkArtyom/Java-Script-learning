@@ -322,3 +322,67 @@
 
 // Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") возвращает true
 // [1, 2, 3, 4, 5], 17;
+
+// -----------------------OBJECTS
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   // Ключ
+//   console.log(key);
+//   // /o/ Значение свойства с таким ключом
+//   consle.log(book[key]);
+// }
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+
+// console.log(keys);
+
+// for (const key of keys) {
+//   // Ключ
+//   console.log(key);
+//   // Значение свойства
+//   console.log(book[key]);
+// }
+
+function compare(firstNumber, secondNumber, operation, result) {
+  const num1 = Number(firstNumber);
+  const num2 = Number(secondNumber);
+  const res = Number(result);
+
+  if (isNaN(num1) || isNaN(num2) || isNaN(res)) return "not number";
+
+  const operationDic = {
+    "+": function sum(c, b) {
+      return c + b;
+    },
+    "-": function sum(c, b) {
+      return c - b;
+    },
+    "*": function sum(c, b) {
+      return c * b;
+    },
+    "/": function sum(c, b) {
+      return c / b;
+    },
+  };
+
+  if (!operationDic[operation]) {
+    return "invalid operation";
+  }
+  const operationResult = operationDic[operation](num1, num2);
+  return operationResult === res;
+}
+
+console.log(compare("2", "2", "*", "4"));
