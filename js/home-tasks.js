@@ -416,3 +416,20 @@
 // }
 
 // for (const value in apartment) values.push(apartment[value]);
+
+// task 12
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const key in object) {
+//     console.log(key);
+//     console.log(object[key]);
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//       console.log(propCount);
+//     }
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+// countProps({ mail: "poly@mail.com", isOnline: true, score: 500 });
