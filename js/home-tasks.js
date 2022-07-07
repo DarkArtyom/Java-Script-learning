@@ -448,3 +448,25 @@
 // for (const key of keys) {
 //   values.push(apartment[key]);
 // }
+
+// task 18
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const key of products) {
+//     if (key.name === productName) {
+//       return key.price;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+// getProductPrice("Radar");
+// // вернуть 1300
