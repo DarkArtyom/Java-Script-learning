@@ -526,3 +526,82 @@
 
 //   // Пиши код выше этой строки
 // }
+
+// function multiply(...args) {
+//   let result;
+//   for (const arg of args) {
+//     result += arg;
+//     console.log(Number(result));
+//   }
+//   return result;
+// }
+
+//   return console.log(args);
+//   let sum;
+//   for (const arg of args) {
+//     console.log(arg);
+// sum += arg;
+// console.log(sum);
+
+// массив всех аргументов
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// task 35
+// const oldName = "Haze";
+// const newName = "Dungeon chronicles";
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     const bookIndex = this.books.indexOf(oldName);
+//     console.log(bookIndex);
+//   },
+// };
+
+// *****Task 41 ****
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i++) {
+//       if (potionName === this.potions[i].name) {
+//         this.potions.splice(i, 1);
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       console.log(potion);
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//         // this.potions.splice(oldName, 1, newName);
+//       }
+//       // for (let i = 0; i < this.potions.length; i += 1) {
+//       //   const potionname = this.potions[i];
+//       //   console.log(potionname.name);
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
