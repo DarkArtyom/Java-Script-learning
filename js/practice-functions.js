@@ -630,3 +630,202 @@
 // }, 0);
 
 // console.log(totalAveragePlaytimePerGame);
+
+// task 45
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+// const names = [...books]
+//   .filter((book) => book.rating > MIN_BOOK_RATING)
+//   .map((book) => book.author);
+// //   .sort((a, b) => a.localeCompare(b));
+
+// console.log(names);
+// task 46
+// const usersLength = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: [
+//       "Jacklyn Lucas",
+//       "Linda Chapman",
+//       "Adrian Cross",
+//       "Solomon Fokes",
+//     ],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//   },
+// ];
+
+// // Change code below this line
+// const getNamesSortedByFriendCount = users => {
+//     const countFriends = [...users].sort ((a,b)=> a.friends.length - b.friends.length).map(user => user.name);
+// return countFriends
+// };
+// // Change code above this line
+
+// getNamesSortedByFriendCount(usersLength);
+
+// task 47
+// const getSortedFriends = (users) => {
+//   const uniqFriends = [...users]
+//     .flatMap((user) => user.friends)
+//     .filter((course, index, array) => array.indexOf(course) === index)
+//     .sort((a, b) => a.localeCompare(b));
+//   return uniqFriends;
+// }
+
+// ---------------------------------BLOCK IV---------------------
+// task 1
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   // Change code below this line
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+//   // Change code above this line
+// };
+
+// task2
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// // task 3
+// const historyService = {
+//   orders: [
+//     { email: "jacob@hotmail.com", dish: "Burrito" },
+//     { email: "solomon@topmail.net", dish: "Burger" },
+//     { email: "artemis@coldmail.net", dish: "Pizza" },
+//     { email: "solomon@topmail.net", dish: "Apple pie" },
+//     { email: "jacob@hotmail.com", dish: "Taco" },
+//   ],
+//   // Change code below this line
+//   getOrdersLog() {
+//     return this.orders
+//       .map((order) => `email: ${order.email} dish: ${order.dish}`)
+//       .join(" - ");
+//   },
+//   getEmails() {
+//     const emails = this.orders.map((order) => order.email);
+//     const uniqueEmails = new Set(emails);
+//     return [...uniqueEmails];
+//   },
+//   getOrdersByEmail(email) {
+//     return this.orders.filter((order) => order.email === email);
+//   },
+//   // Change code above this line
+// };
