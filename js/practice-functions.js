@@ -830,12 +830,122 @@
 //   // Change code above this line
 // };
 
-const animal = {
-  legs: 4,
-};
+// const animal = {
+//   legs: 4,
+// };
 
-const dog = Object.create(animal);
-dog.name = "mango";
-console.log(dog);
-console.log(animal.isPrototypeOf(dog));
-console.log(animal);
+// const dog = Object.create(animal);
+// dog.name = "mango";
+// console.log(dog);
+// console.log(animal.isPrototypeOf(dog));
+// console.log(animal);
+
+// const User = function ({ email, password } = {}) {
+//   this.email = email;
+//   this.password = password;
+// };
+// User.prototype.changeEmail = function (newMail) {
+//   this.email = newMail;
+// };
+// const mango = new User({ email: "mango@gmail.com", password: 111111 });
+// console.log(mango);
+
+// task 10
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(newItem) {
+//     return this.items.push(newItem);
+//   }
+//   removeItem(itemToRemove) {
+//     const indexItem = this.items.indexOf(itemToRemove);
+//     return this.items.splice(indexItem, 1);
+//   }
+// }
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// task 11
+// class StringBuilder {
+//   constructor (initialValue) {
+//     this.value = initialValue
+//   }
+//   getValue() {
+//     return this.value
+//   }
+//   padEnd(str) {
+//    this.value =  this.value + str
+//   }
+// padStart(str) {
+// this.value= str + this.value
+// }
+// padBoth(str) {
+// this.value=str + this.value + str
+// }
+// }
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+task20;
+class User {
+  email;
+  constructor(email) {
+    this.email = email;
+  }
+  get email() {
+    return this.email;
+  }
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}
+class Admin extends User {
+  // Change code below this line
+  static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
+  blacklistedEmails = [];
+  blacklist(email) {
+    this.blacklistedEmails.push(email);
+  }
+  isBlacklisted(email) {
+    if (this.blacklistedEmails.includes(email)) {
+      return true;
+    }
+    return false;
+  }
+  // Change code above this line
+}
+const mango = new Admin({
+  email: "mango@mail.com",
+  accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+mango.blacklist("poly@mail.com");
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted("mango@mail.com")); // false
+console.log(mango.isBlacklisted("poly@mail.com")); // true
