@@ -91,6 +91,11 @@
 //   },
 // ];
 
+// console.log(restaurants);
+
+// const restorantsObjects = restaurants.map((restaurant) => restaurant.brand);
+// console.log(restorantsObjects);
+
 // const torpedaDelivery = {
 //   getDelivery(delivery, food) {
 //     alert(
@@ -135,8 +140,18 @@
 //   { name: "Tatiana", score: 30 },
 // ];
 
-// const highestScore = (users) => [...users].sort((a, b) => b.score - a.score);
+// const sortNames = (users) =>
+//   [...users].sort((previousName, nextName) =>
+//     previousName.name.localeCompare(nextName.name)
+//   );
+// console.log(sortNames(users));
 
+// const highestScore = (users) => [...users].sort((a, b) => b.score - a.score);
+// const allScores = (users) => users.map((user) => user.score);
+// const totalSum = (users) => users.reduce((acc, user) => acc + user.score, 0);
+// console.log(totalSum(users));
+
+// console.log(allScores(users));
 // console.log(highestScore(users));
 
 // foo1(); // { name: "Tatiana", score: 30 }
@@ -144,8 +159,21 @@
 // foo3(); // 60
 
 // Напишите две функции:
-// // - letMeSeeYourName(callback) - спрашивает имя пользователя через prompt и вызывает callback функцию
-// // - greet(name) - коллбек, принимающий имя и логирующий в консоль строку "Привет <name>"
-// // Реализуй проверку, что prompt не пустой
+// - letMeSeeYourName(callback) - спрашивает имя пользователя через prompt и вызывает callback функцию
+// - greet(name) - коллбек, принимающий имя и логирующий в консоль строку "Привет <name>"
+// Реализуй проверку, что prompt не пустой
 
-// letMeSeeYourName(greet); // Привет <name>
+// const greet = (name) => console.log(`Hello ${name}`);
+
+// const letMeSeeYourName = (callback) => {
+//   const userName = prompt(`enter your name`);
+//   userName !== "" ? callback(userName) : letMeSeeYourName(callback);
+// };
+
+letMeSeeYourName(greet); // Привет <name>
+
+const Arr = ["hello", "world", "this", "is", "great"];
+//   => 'hello world this is great'
+const smash = (words) => words.join(" ").trim();
+
+console.log(smash(Arr));
