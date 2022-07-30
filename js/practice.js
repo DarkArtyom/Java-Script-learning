@@ -298,3 +298,44 @@
 // };
 
 // console.log(summation(8));
+
+function digitize(n) {
+  const arr = String(n).split("").map(Number);
+  let sum = (arr) => arr.reduce((acc, num) => acc + num, 0);
+  let preresult = sum(arr);
+  if (preresult > 10) {
+    const arr2 = String(preresult).split("").map(Number);
+    const abc = arr2.reduce((acc, num) => acc + num, 0);
+    return abc;
+  } else {
+  }
+}
+
+function digitize(n) {
+  let arr = String(n).split("").map(Number);
+  let sum = (arr) => arr.reduce((acc, num) => acc + num, 0);
+  let preresult = sum(arr);
+  let result = 0;
+  while (preresult > 10) {
+    digitize(preresult);
+    result = digitize(preresult);
+    break;
+  }
+  if (preresult < 10) {
+    result = preresult;
+  }
+  return result;
+}
+
+console.log(digitize(493193));
+
+function countBy(x, n) {
+  const sum = x * n;
+  let z = [];
+  for (let i = x; i <= sum; i = i + x) {
+    z.push(i);
+  }
+  return z;
+}
+
+console.log(countBy(1, 10));
